@@ -29,14 +29,16 @@ public class AdminView {
 
     public static void printAdminOptions(){
         AdminServices adservice=new AdminServices();
+        Scanner in = new Scanner(System.in);
+        int choice=0;
 
+        while (choice!=4){
         System.out.println("1.Add Flights");
         System.out.println("2.Remove Flight");
         System.out.println("3.View Bookings");
         System.out.println("4.Exit");
         System.out.println("Enter a number to perform an operation");
-        Scanner in = new Scanner(System.in);
-        int choice=in.nextInt();
+        choice=in.nextInt();
 
         switch(choice) {
 
@@ -78,13 +80,15 @@ public class AdminView {
             case 3:{
                 System.out.println("Enter the flight number");
                 String flight_number = in.next();
-                System.out.println("");
-                adservice.viewbookings(flight_number);
+                System.out.println("Enter the time");
+                String time = in.next();
+
+                adservice.viewbookings(flight_number, time);
             }
                 break;
             case 4:
                 FlightReservation.initialMethod();
                 break;
-        }
+        }}
     }
 }
