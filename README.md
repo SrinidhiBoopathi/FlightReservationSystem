@@ -6,7 +6,7 @@ I used IntelliJ create this application. It provides functionalities like bookin
 The program also creates 5 tables in that database named Customer details,Flight details,
 Seat details,Trip details,Booking details. 
 
-• The default admin username is "admin" and password is "admin" - case sensitive.
+• The default admin username is "admin" and password is "123".
 
 The console application has two users:
 
